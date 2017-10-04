@@ -14,6 +14,7 @@
 		443610E91F842041003DAF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443610E71F842041003DAF11 /* LaunchScreen.storyboard */; };
 		443610F41F842041003DAF11 /* Conversion_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443610F31F842041003DAF11 /* Conversion_CalculatorTests.swift */; };
 		443610FF1F842042003DAF11 /* Conversion_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443610FE1F842042003DAF11 /* Conversion_CalculatorUITests.swift */; };
+		EF25A0221F84718F00901BFD /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25A0211F84718F00901BFD /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		443610FA1F842042003DAF11 /* Conversion CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Conversion CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443610FE1F842042003DAF11 /* Conversion_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion_CalculatorUITests.swift; sourceTree = "<group>"; };
 		443611001F842042003DAF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF25A0211F84718F00901BFD /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				443610DE1F842041003DAF11 /* AppDelegate.swift */,
 				443610E01F842041003DAF11 /* ViewController.swift */,
+				EF25A0211F84718F00901BFD /* model.swift */,
 				443610E21F842041003DAF11 /* Main.storyboard */,
 				443610E51F842041003DAF11 /* Assets.xcassets */,
 				443610E71F842041003DAF11 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443610E11F842041003DAF11 /* ViewController.swift in Sources */,
+				EF25A0221F84718F00901BFD /* model.swift in Sources */,
 				443610DF1F842041003DAF11 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
