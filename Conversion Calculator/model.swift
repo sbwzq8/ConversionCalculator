@@ -13,7 +13,7 @@ import UIKit
 
 class Conversions {
     enum Unit: Int {
-        case yards = 0, millimeters, centimeters, inches, meters, gallons, pints, liters, millileters, fahrenheit, celsius, pounds, kilograms, ounces, stones
+        case yards = 0, millimeters, centimeters, inches, meters, gallons, pints, liters, millileters, fahrenheit, celsius, kelvin, pounds, kilograms, grams, ounces, stones
         
         func convertTo(unit to: Unit, value val: Double) -> Double? {
             var constant = 1.0
@@ -27,7 +27,7 @@ class Conversions {
                 } else if to == .millimeters {
                     constant = 25.4
                 } else if to == .yards {
-                    constant == 0.027778
+                    constant = 0.027778
                 }
                 
             case .centimeters:
@@ -111,6 +111,101 @@ class Conversions {
                 } else if to == .liters {
                     constant = 0.001
                 }
+                
+            //Temperature ------------------------
+            case .fahrenheit:
+                if to == .fahrenheit{
+                    return val
+                }else if to == .celsius{
+                    return ((val - 32) * (5/9))
+                }else if to == .kelvin{
+                    return (((val - 32) * (5/9)) + 273.15)
+                }
+                
+            case .celsius:
+                if to == .celsius{
+                    return val
+                }else if to == .fahrenheit{
+                    return ((val * (9/5)) + 32)
+                }else if to == .kelvin{
+                    return (val + 273.15)
+                }
+                
+            case .kelvin:
+                if to == .celsius{
+                    return (val - 273.15)
+                }else if to == .fahrenheit{
+                    return (((val - 273.15) * (9/5)) + 32)
+                }else if to == .kelvin{
+                    return val
+                }
+                
+            //Weight -----------------------------
+            case .pounds:
+                if to == .pounds{
+                    constant = 1
+                }else if to == .ounces{
+                    constant = 16
+                }else if to == .kilograms{
+                    constant = 0.45359237
+                }else if to == .grams{
+                    constant = 453.59237
+                }else if to == .stones{
+                    constant = 0.0714286
+                }
+                
+            case .ounces:
+                if to == .pounds{
+                    constant = 0.0625
+                }else if to == .ounces{
+                    constant = 1
+                }else if to == .kilograms{
+                    constant = 0.0283495
+                }else if to == .grams{
+                    constant = 28.3495
+                }else if to == .stones{
+                    constant = 0.00446429
+                }
+                
+            case .kilograms:
+                if to == .pounds{
+                    constant = 2.20462
+                }else if to == .ounces{
+                    constant = 35.274
+                }else if to == .kilograms{
+                    constant = 1
+                }else if to == .grams{
+                    constant = 1000
+                }else if to == .stones{
+                    constant = 0.157473
+                }
+                
+            case .grams:
+                if to == .pounds{
+                    constant = 0.00220462
+                }else if to == .ounces{
+                    constant = 0.035274
+                }else if to == .kilograms{
+                    constant = 0.001
+                }else if to == .grams{
+                    constant = 1
+                }else if to == .stones{
+                    constant = 0.000157473
+                }
+                
+            case .stones:
+                if to == .pounds{
+                    constant = 14
+                }else if to == .ounces{
+                    constant = 224
+                }else if to == .kilograms{
+                    constant = 6.35029
+                }else if to == .grams{
+                    constant = 6350.29
+                }else if to == .stones{
+                    constant = 1
+                }
+                
                 
             default:
                 break;
